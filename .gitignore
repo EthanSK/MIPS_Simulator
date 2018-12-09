@@ -1,0 +1,11 @@
+bin/*
+build/*
+test/mips-parser/bin/*
+.vscode/*
+_config.yml
+MIPS_Simulator.xcodeproj
+ethan_reflection.md
+reflection.md
+test/output/*
+doc/testbench_instructions.txt
+doc/instructions_bin.txt

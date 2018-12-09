@@ -1,0 +1,45 @@
+if ur github messes up, do this in the mips simulator dir in a shell:
+git reset --hard origin/master
+
+
+LOOK AT DATA CARD IN TEXT BOOK
+good links:
+
+
+//super useful this one;
+https://www.eg.bucknell.edu/~csci320/mips_web/ for converting to instructions to binary and finding out info about them
+
+https://inst.eecs.berkeley.edu/~cs61c/resources/MIPS_help.html - info about insruction types
+
+useful: http://www2.engr.arizona.edu/~ece369/Resources/spim/MIPSReference.pdf
+
+also useful reference :
+http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html
+
+
+registers in mips: http://www.cs.uwm.edu/classes/cs315/Bacon/Lecture/HTML/ch05s03.html
+
+linked from the dude http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html - good summary of all functions 
+
+
+from here  https://github.com/m8pple/arch2-2018-cw/issues/14  ->
+
+A LWL or LWR to the getc address is legal only if the address is aligned
+In other cases it should result in an exception. <-- this acc makes sense after reading about lwl and lwr
+
+interesting stuff about addiu and signed overflow 
+https://stackoverflow.com/a/36274750/6820042
+
+
+FULL ON INFORMATION
+https://www.cs.cornell.edu/courses/cs3410/2008fa/MIPS_Vol2.pdf
+
+
+very good info
+http://chortle.ccsu.edu/assemblytutorial/index.html#part4
+
+2s complement converter for exit codes
+https://www.exploringbinary.com/twos-complement-converter/
+
+
+mips sharing: http://bit.ly/eie2mipsshare
