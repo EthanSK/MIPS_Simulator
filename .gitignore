@@ -9,3 +9,4 @@ reflection.md
 test/output/*
 doc/testbench_instructions.txt
 doc/instructions_bin.txt
+.DS_Store
