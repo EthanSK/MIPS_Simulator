@@ -1,0 +1,6 @@
+make[1]: Entering directory '/media/sf_shared/cw/summative/working/help'
+mkdir -p bin
+rm -f bin/mips_testbench
+cp -a test/testbench.sh bin/mips_testbench
+chmod 755 bin/mips_testbench
+make[1]: Leaving directory '/media/sf_shared/cw/summative/working/help'

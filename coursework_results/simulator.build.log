@@ -1,0 +1,14 @@
+make[1]: Entering directory '/media/sf_shared/cw/summative/working/help'
+mkdir -p build
+g++ -W -Wall -std=c++11 -c src/simulator.cpp -o build/simulator.o
+mkdir -p build
+g++ -W -Wall -std=c++11 -c src/helpers.cpp -o build/helpers.o
+mkdir -p build
+g++ -W -Wall -std=c++11 -c src/memory.cpp -o build/memory.o
+mkdir -p build
+g++ -W -Wall -std=c++11 -c src/registers.cpp -o build/registers.o
+mkdir -p build
+g++ -W -Wall -std=c++11 -c src/instructions.cpp -o build/instructions.o
+mkdir -p bin
+g++ -W -Wall -std=c++11 build/simulator.o build/helpers.o build/memory.o build/registers.o build/instructions.o -o bin/mips_simulator
+make[1]: Leaving directory '/media/sf_shared/cw/summative/working/help'

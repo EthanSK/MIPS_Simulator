@@ -1,0 +1,150 @@
+add1, add, Pass, ES5017, | expected exit code: -10 actual exit code: -10 | extra info: tests that add correctly traps overflow |
+add2, add, Pass, ES5017, | expected exit code: -10 actual exit code: -10 | extra info: tests that add correctly traps overflow with negative numbers |
+addi1, addi, Pass, ES5017, | expected exit code: -10 actual exit code: -10 | extra info: tests that addi correctly traps overflow |
+addi2, addi, Fail, ES5017, | expected exit code: -120 actual exit code: 0 | extra info: tests addi result at nth bit |
+addi, addi, Fail, ES5017, | expected exit code: 25 actual exit code: 0 | extra info: tests simple case for addi |
+add, add, Fail, ES5017, | expected exit code: 8 actual exit code: 0 | extra info: tests simple case for add |
+addu, addu, Pass, ES5017, | expected exit code: 31 actual exit code: 31 | extra info: does a simple test of addu |
+andi, andi, Pass, ES5017, | expected exit code: 115 actual exit code: 115 | extra info: tests simple case for andi |
+and, and, Pass, ES5017, | expected exit code: 17 actual exit code: 17 | extra info: tests simple case for and |
+beq2, beq, Pass, ES5017, | expected exit code: 5 actual exit code: 5 | extra info: tests if beq doesnt occur when registers are not equal |
+beq, beq, Fail, ES5017, | expected output: 7 actual output: 7 | expected exit code: 4 actual exit code: 6 | extra info: tests simple case for beq and branch delay slot |
+bgez1, bgez, Pass, ES5017, | expected exit code: 5 actual exit code: 5 | extra info: tests if bgez1 doesnt occur when register in negative |
+bgezal1, bgezal, Pass, ES5017, | expected exit code: 6 actual exit code: 6 | extra info: tests simple case for bgezal not being triggered |
+bgezal, bgezal, Fail, ES5017, | expected output: 8 actual output:  | expected exit code: 0 actual exit code: 6 | extra info: tests simple case for bgezal and branch delay slot with a function assuming stdout works |
+bgez, bgez, Pass, ES5017, | expected output: 7 actual output: 7 | expected exit code: 4 actual exit code: 4 | extra info: tests simple case for bgez and branch delay slot |
+bgtz1, bgtz, Pass, ES5017, | expected exit code: 5 actual exit code: 5 | extra info: tests if bgtz doesnt occur when register in negative |
+bgtz, bgtz, Fail, ES5017, | expected output: 7 actual output: 7 | expected exit code: 4 actual exit code: 6 | extra info: tests simple case for bgtz and branch delay slot |
+blez1, blez, Pass, ES5017, | expected exit code: 5 actual exit code: 5 | extra info: tests if blez doesnt occur when register in positive |
+blez, blez, Fail, ES5017, | expected output: 7 actual output: 7 | expected exit code: 4 actual exit code: 6 | extra info: tests simple case for blez and branch delay slot |
+bltz1, bltz, Pass, ES5017, | expected exit code: 5 actual exit code: 5 | extra info: tests if bltz doesnt occur when register in positive |
+bltzal1, bltzal, Pass, ES5017, | expected exit code: 6 actual exit code: 6 | extra info: tests simple case for bltzal not being triggered |
+bltzal, bltzal, Fail, ES5017, | expected output: 8 actual output:  | expected exit code: 0 actual exit code: 6 | extra info: tests simple case for bltzal and branch delay slot with a function assuming stdout works |
+bltz, bltz, Pass, ES5017, | expected output: 7 actual output: 7 | expected exit code: 4 actual exit code: 4 | extra info: tests simple case for bltz and branch delay slot |
+bne1, bne, Pass, ES5017, | expected exit code: -11 actual exit code: -11 | extra info: tests out of instruction range branch (should throw memory error) |
+bne2, bne, Pass, ES5017, | expected exit code: 5 actual exit code: 5 | extra info: tests if bne doesnt occur when registers are equal |
+bne, bne, Fail, ES5017, | expected output: 7 actual output: 7 | expected exit code: 3 actual exit code: 5 | extra info: tests simple case for bne and branch delay slot |
+div1, div, Pass, ES5017, | expected exit code: 2 actual exit code: 2 | extra info: ensures div does not crash or throw exception when dividing by 0 |
+div2, div, Pass, ob1717, | expected output: 255 255 255 255 actual output: 255 255 255 255 | extra info: 0 / a where a > 0 tets lo/quotient |
+div9, div, Fail, ob1717, | expected output: 254 255 255 255 actual output: 255 255 255 255 | expected exit code: 0 actual exit code: 0 | extra info: a/a tets lo/quotient |
+div, div, Fail, ES5017, | expected output: 39 8 actual output:  | expected exit code: 0 actual exit code: 0 | extra info: tests simple div of negative and positive ints |
+divu1, divu, Pass, ES5017, | expected output: 170 3 actual output: 170 3 | extra info: tests simple divu of a signed int that should be interpreted as unsigned |
+divu, divu, Fail, ES5017, | expected output: 2 243 actual output:  | expected exit code: 0 actual exit code: 0 | extra info: tests simple divu of unsigned ints |
+INTERNAL1, INTERNAL, Pass, ES5017, | expected exit code: 69 actual exit code: 69 | extra info: tests that a bunch of nops dont terminate the programme |
+INTERNAL, INTERNAL, Pass, ES5017, | expected exit code: 0 actual exit code: 0 | extra info: tests that $0 cannot be written to |
+jal, jal, Pass, ES5017, | expected exit code: 36 actual exit code: 36 | extra info: tests simple case for jump and link with branch delay slot |
+jalr, jalr, Pass, ES5017, | expected exit code: 40 actual exit code: 40 | extra info: tests simple case for jalr with branch delay slot |
+j, j, Pass, ES5017, | expected exit code: 40 actual exit code: 40 | extra info: tests simple case for jump with branch delay slot |
+jr, jr, Pass, ES5017, | expected exit code: 3 actual exit code: 3 | extra info: tests simple case jr delay slot |
+lb11, lb, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lb1, lb, Fail, ES5017, | expected exit code: -7 actual exit code: 0 | extra info: tests lb sign extension |
+lb2, lb, Fail, ES5017, | expected output: 104 101 108 108 111 actual output:  | expected exit code: 0 actual exit code: 0 | extra info: test memory mapped input with lb assuming memory mapped output works |
+lb3, lb, Pass, ES5017, | expected exit code: -11 actual exit code: -11 | extra info: tests lb reading at addr_data - 1 throws exception |
+lb4, lb, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lb5, lb, Fail, ob1717, | expected exit code: 60 actual exit code: 0 |
+lb6, lb, Pass, ob1717, | expected exit code: 0 actual exit code: 0 |
+lb7, lb, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lb8, lb, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lb9, lb, Fail, ob1717, | expected exit code: 35 actual exit code: 0 |
+lb, lb, Fail, ES5017, | expected exit code: 122 actual exit code: 0 | extra info: tests simple case for lb |
+lbu10, lbu, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lbu1, lbu, Fail, ES5017, | expected exit code: 11 actual exit code: 0 | extra info: tests lbu zero extension |
+lbu2, lbu, Fail, ES5017, | expected output: 104 actual output:  | expected exit code: 0 actual exit code: 0 | extra info: test memory mapped input with lbu assuming memory mapped output works |
+lbu3, lbu, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lbu4, lbu, Fail, ob1717, | expected exit code: 60 actual exit code: 0 |
+lbu5, lbu, Pass, ob1717, | expected exit code: 0 actual exit code: 0 |
+lbu6, lbu, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lbu7, lbu, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lbu8, lbu, Fail, ob1717, | expected exit code: 35 actual exit code: 0 |
+lbu9, lbu, Fail, ob1717, | expected exit code: 35 actual exit code: 0 |
+lbu, lbu, Fail, ES5017, | expected exit code: -102 actual exit code: 0 | extra info: tests simple case for lbu |
+lh10, lh, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lh1, lh, Fail, ES5017, | expected exit code: -7 actual exit code: 0 | extra info: tests lh sign extension |
+lh2, lh, Fail, ES5017, | expected output: 104 101 108 108 111 actual output:  | expected exit code: 0 actual exit code: 0 | extra info: test memory mapped input with lh assuming memory mapped output works |
+lh3, lh, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lh4, lh, Fail, ob1717, | expected exit code: 3 actual exit code: 0 |
+lh5, lh, Pass, ob1717, | expected exit code: 0 actual exit code: 0 |
+lh6, lh, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lh7, lh, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lh8, lh, Fail, ob1717, | expected exit code: 69 actual exit code: 0 |
+lh9, lh, Fail, ob1717, | expected exit code: 122 actual exit code: 0 |
+lh, lh, Fail, ES5017, | expected exit code: 122 actual exit code: 0 | extra info: tests simple case for lh |
+lhu10, lhu, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lhu1, lhu, Fail, ES5017, | expected exit code: 9 actual exit code: 0 | extra info: tests lhu zero extension |
+lhu2, lhu, Fail, ES5017, | expected output: 104 actual output:  | expected exit code: 0 actual exit code: 0 | extra info: test memory mapped input with lh assuming memory mapped output works |
+lhu3, lhu, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lhu4, lhu, Fail, ob1717, | expected exit code: 3 actual exit code: 0 |
+lhu5, lhu, Pass, ob1717, | expected exit code: 0 actual exit code: 0 |
+lhu6, lhu, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lhu7, lhu, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lhu8, lhu, Fail, ob1717, | expected exit code: 69 actual exit code: 0 |
+lhu9, lhu, Fail, ob1717, | expected exit code: 122 actual exit code: 0 |
+lhu, lhu, Fail, ES5017, | expected exit code: 122 actual exit code: 0 | extra info: tests simple case for lhu |
+lui, lui, Pass, ES5017, | expected output: 103 actual output: 103 | extra info: tests simple case for lui |
+lw10, lw, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lw11, lw, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lw12, lw, Fail, ob1717, | expected exit code: 122 actual exit code: 0 |
+lw13, lw, Fail, ob1717, | expected exit code: 122 actual exit code: 0 |
+lw14, lw, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lw1, lw, Pass, ES5017, | expected exit code: -11 actual exit code: -11 | extra info: loads a word from unreadable memory and throws exception |
+lw2, lw, Fail, ES5017, | expected output: 104 101 108 108 111 255 actual output:  | expected exit code: 0 actual exit code: 0 | extra info: test memory mapped input with lw assuming memory mapped output works and ensured the eof characters is returned |
+lw3, lw, Fail, ES5017, | expected exit code: 19 actual exit code: 0 | extra info: test memory mapped input without memory mapped output |
+lw4, lw, Pass, ES5017, | expected exit code: 0 actual exit code: 0 | extra info: tests uninitialised word  |
+lw5, lw, Pass, ES5017, | expected exit code: -11 actual exit code: -11 | extra info: tests misaligned word  |
+lw6, lw, Pass, ES5017, | expected exit code: -11 actual exit code: -11 | extra info: tests load word reading outside addr_data range throws exception |
+lw7, lw, Pass, ob1717, | expected exit code: -11 actual exit code: -11 |
+lw8, lw, Fail, ob1717, | expected exit code: 69 actual exit code: 0 |
+lw9, lw, Pass, ob1717, | expected exit code: 0 actual exit code: 0 |
+lwl1, lwl, Pass, ES5017, | expected output: 52 205 actual output: 52 205 | extra info: tests lwl merges the register |
+lwl2, lwl, Fail, ES5017, | expected output: 170 103 actual output: 52 | expected exit code: 0 actual exit code: 0 | extra info: tests lwl aligned |
+lwl, lwl, Fail, ES5017, | expected exit code: -51 actual exit code: 0 | extra info: test simple case for lwl  |
+lw, lw, Pass, ES5017, | expected exit code: 9 actual exit code: 9 | extra info: tests simple case for load word |
+lwr1, lwr, Pass, ES5017, | expected output: 137 103 170 171 actual output: 137 103 170 171 | extra info: tests lwl with lwr and register merge is correct |
+lwr2, lwr, Fail, ES5017, | expected output: 103 18 actual output: 18 | expected exit code: 0 actual exit code: 0 | extra info: tests lwr aligned |
+lwr, lwr, Fail, ES5017, | expected exit code: -119 actual exit code: 0 | extra info: test simple case for lwr  |
+mthi, mthi, Pass, ES5017, | expected exit code: 9 actual exit code: 9 | extra info: tests simple mthi |
+mtlo, mtlo, Pass, ES5017, | expected exit code: -10 actual exit code: -10 | extra info: tests simple mtlo |
+mult, mult, Pass, ES5017, | expected output: 13 255 actual output: 13 255 | extra info: tests simple multiply of negative and positive ints |
+multu, multu, Pass, ES5017, | expected output: 13 127 actual output: 13 127 | extra info: tests simple multiply unsigned |
+ori, ori, Pass, ES5017, | expected exit code: 127 actual exit code: 127 | extra info: tests simple case for ori |
+or, or, Pass, ES5017, | expected exit code: 127 actual exit code: 127 | extra info: tests simple case for or |
+sb1, sb, Fail, ES5017, | expected output: 99 84 122 actual output: 24 160 208 | expected exit code: 0 actual exit code: 0 | extra info: tests that sb triggers stdout |
+sb2, sb, Fail, ob1717, | expected exit code: -11 actual exit code: 0 |
+sb3, sb, Fail, ob1717, | expected exit code: 70 actual exit code: 0 |
+sb4, sb, Fail, ob1717, | expected exit code: 70 actual exit code: 0 |
+sb5, sb, Fail, ob1717, | expected exit code: -11 actual exit code: 0 |
+sb, sb, Fail, ES5017, | expected exit code: -51 actual exit code: 0 | extra info: tests simple case for sb |
+sh1, sh, Pass, ES5017, | expected exit code: 0 actual exit code: 0 | extra info: tests that only bottom halfword is stored |
+sh2, sh, Fail, ES5017, | expected output: 99 84 122 actual output:  | expected exit code: 0 actual exit code: 0 | extra info: tests that sh triggers stdout |
+sh3, sh, Fail, ob1717, | expected exit code: -11 actual exit code: 0 |
+sh4, sh, Fail, ob1717, | expected exit code: 18 actual exit code: 0 |
+sh5, sh, Fail, ob1717, | expected exit code: 18 actual exit code: 0 |
+sh6, sh, Fail, ob1717, | expected exit code: -11 actual exit code: 0 |
+sh, sh, Fail, ES5017, | expected exit code: -85 actual exit code: 0 | extra info: tests simple case for sh |
+sll, sll, Pass, ES5017, | expected exit code: 24 actual exit code: 24 | extra info: tests simple case for sll |
+sllv, sllv, Pass, ES5017, | expected exit code: 96 actual exit code: 96 | extra info: tests case for sllv making sure to only use low 5 order bits of gpr |
+slt1, slt, Pass, ES5017, | expected exit code: 0 actual exit code: 0 | extra info: tests simple case for slt condition not met |
+slti1, slti, Pass, ES5017, | expected exit code: 0 actual exit code: 0 | extra info: tests simple case for slti condition not met |
+slti, slti, Fail, ES5017, | expected exit code: 1 actual exit code: 0 | extra info: tests simple case for slti and ensures numbers are compared as signed |
+sltiu1, sltiu, Pass, ES5017, | expected exit code: 0 actual exit code: 0 | extra info: tests simple case for sltiu condition not met |
+sltiu, sltiu, Fail, ES5017, | expected exit code: 1 actual exit code: 18 | extra info: tests simple case for sltu and ensures numbers are compared as unsigned |
+slt, slt, Pass, ES5017, | expected exit code: 1 actual exit code: 1 | extra info: tests simple case for slt and ensures numbers are compared as signed |
+sltu1, sltu, Pass, ES5017, | expected exit code: 0 actual exit code: 0 | extra info: tests simple case for sltu condition not met |
+sltu, sltu, Fail, ES5017, | expected exit code: 1 actual exit code: 18 | extra info: tests simple case for sltu and ensures numbers are compared as unsigned |
+sra, sra, Pass, ES5017, | expected exit code: -2 actual exit code: -2 | extra info: tests simple case for sra |
+srav, srav, Pass, ES5017, | expected exit code: -2 actual exit code: -2 | extra info: tests simple case for srav |
+srl1, srl, Pass, ES5017, | expected output: 2 actual output: 2 | extra info: tests another simple case for srl |
+srl, srl, Fail, ES5017, | expected exit code: 7 actual exit code: 0 | extra info: tests simple case for srl |
+srlv, srlv, Pass, ES5017, | expected exit code: 3 actual exit code: 3 | extra info: tests case for srlv making sure to only use low 5 order bits of gpr |
+sub1, sub, Pass, ES5017, | expected exit code: -10 actual exit code: -10 | extra info: tests that sub correctly traps overflow |
+sub2, sub, Pass, ob1717, | expected exit code: -10 actual exit code: -10 | extra info: tests corner case of sub trap initiated |
+sub, sub, Fail, ES5017, | expected exit code: 17 actual exit code: 50 | extra info: tests simple case for sub |
+subu, subu, Pass, ES5017, | expected exit code: 79 actual exit code: 79 | extra info: does a simple test of subu |
+sw1, sw, Pass, ES5017, | expected output: 104 115 actual output: 104 115 | extra info: tests sw with stdout |
+sw4, sw, Fail, ob1717, | expected exit code: -11 actual exit code: 0 |
+sw5, sw, Fail, ob1717, | expected exit code: 18 actual exit code: 0 |
+sw6, sw, Fail, ob1717, | expected exit code: 18 actual exit code: 0 |
+sw7, sw, Fail, ob1717, | expected exit code: -11 actual exit code: 0 |
+sw, sw, Fail, ES5017, | expected exit code: -51 actual exit code: 0 | extra info: tests simple case for sw |
+xori, xori, Pass, ES5017, | expected exit code: 28 actual exit code: 28 | extra info: tests simple case for xori |
+xor, xor, Pass, ES5017, | expected exit code: 28 actual exit code: 28 | extra info: tests simple case for xor |
