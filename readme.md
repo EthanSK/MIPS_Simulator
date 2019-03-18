@@ -6,10 +6,10 @@ https://github.com/m8pple/arch2-2018-cw
 
 ### To use:
 
-make clean
-make simulator
-make testbench
-bin/mips_testbench  bin/mips_simulator
+make clean  
+make simulator  
+make testbench  
+bin/mips_testbench  bin/mips_simulator  
 
 
 ### Results:
